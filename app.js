@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
 
+const routeReset = require('./routes/reset');
 const routeEvent = require('./routes/event');
 const routeBalance = require('./routes/balance');
 
-app.use('/reset', (req, res, next) => {
-    res.status(200).send({
-        mensagem: 'Ok'
-    });
-});
+app.use('/event', routeEvent);
+app.use('/balance', routeBalance);
+
+
+
 
 module.exports = app;
