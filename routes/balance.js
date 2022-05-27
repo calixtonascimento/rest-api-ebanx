@@ -6,13 +6,9 @@ router.get('/', (req, res) => {
     console.log(id);
 
     if(id === '100'){
-        res.status(200).send({
-            status : "Ok"
-        });
+        res.status(200).send('20');
     }else{
-        res.status(404).send({
-            status : "Error"
-        });
+        res.status(404).send('0');
     }
 });
 
